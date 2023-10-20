@@ -131,7 +131,7 @@ $(function () {
   }
 }); /* End Fn */
 
-var words = ["Enjoy your life", "Make money while young", "Gprompt is awesome"],
+var words = ["Travel", "Health", "Nature", "Career", "Sports"],
   part,
   i = 0,
   offset = 0,
@@ -139,7 +139,9 @@ var words = ["Enjoy your life", "Make money while young", "Gprompt is awesome"],
   forwards = true,
   skip_count = 0,
   skip_delay = 15,
+  currentWordIndex = 0,
   speed = 100;
+
 var wordflick = function () {
   setInterval(function () {
     if (forwards) {
@@ -172,6 +174,24 @@ var wordflick = function () {
   }, speed);
 };
 
+var wordChange = function () {
+  // Initial display of the first word
+  $(".word").text(words[currentWordIndex]);
+
+  setInterval(function () {
+    // Get the next word
+    currentWordIndex++;
+
+    // If reached the end, start from the first word
+    if (currentWordIndex >= words.length) {
+      currentWordIndex = 0;
+    }
+
+    // Display the current word in the HTML element with class "wordChange"
+    $(".word").text(words[currentWordIndex]);
+  }, 1000);
+};
+
 $(document).ready(function () {
-  wordflick();
+  wordChange();
 });
