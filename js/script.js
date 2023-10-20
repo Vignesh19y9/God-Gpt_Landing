@@ -131,7 +131,16 @@ $(function () {
   }
 }); /* End Fn */
 
-var words = ["Travel", "Health", "Nature", "Career", "Sports"],
+var words = [
+    "Travel",
+    "Health",
+    "Nature",
+    "Career",
+    "Sports",
+    "Beauty",
+    "Future",
+    "Family",
+  ],
   part,
   i = 0,
   offset = 0,

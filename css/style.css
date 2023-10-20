@@ -94,7 +94,7 @@ font-family: -apple-system-tall-body */
 
 body {
   /* background-color: var(--background-outer); */
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  /* font-family: "Roboto", Arial, Helvetica, sans-serif; */
 
   /* font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif; */
   font-size: 16px;
@@ -113,9 +113,9 @@ a:focus {
 
 .gradient-text {
   background: linear-gradient(
-    to left,
+    to bottom,
     var(--theme-orange),
-    var(--theme-orange2)
+    var(--text-primary-hover)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -226,7 +226,7 @@ p.small {
     var(--btn-gradient2) 100%
   );
   background-image: -webkit-linear-gradient(
-    122deg,
+    12deg,
     var(--btn-gradient1) 0%,
     var(--btn-gradient2) 100%
   );
